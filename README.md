@@ -5,6 +5,7 @@ This course is provided by edX - Professor Eric Grimson
 
 This repository contains solutions to:
 
+* Coding Exercises
 * Problem Sets
 * Midterm Exam and Final Exam
 
