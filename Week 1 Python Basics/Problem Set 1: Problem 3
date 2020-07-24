@@ -1,0 +1,26 @@
+"""
+Assume s is a string of lower case characters.
+
+Write a program that prints the longest substring of s in which the letters occur in alphabetical order. 
+"""
+
+#code
+
+substring, result = '', ''
+for char in s:
+    if substring == '':
+        substring = char
+    elif substring:
+        if substring[-1] <= char:
+            substring += char
+        else:
+          if len(substring) > len(result):
+            result, substring= substring, char
+          else:
+            substring = char
+#this extra line is needed in the event that the length of the substring isn't evaluated in the for loop's 1st else block
+#ie if the test case is abcdefghijklmnopqrstuvwxyz
+#or if the longest substring's last character is the last character of the entire string
+if len(substring) > len(result):
+  result = substring
+print('Longest substring in alphabetical order is: ',result)
